@@ -1,0 +1,290 @@
+# [No.1] construct_wrapper.1
+# In file C:/ProgramData/_Projects/PyProjects/MS1/bagoftricks-lt/lib/backbone/resnet.py(163)/    def construct(self, x, **kwargs):/
+funcgraph fg_1(
+        %para1 : Tensor(F32)[2, 3, 224, 224]    # x
+        , %para2 : Ref[Tensor(F32)][64, 3, 7, 7]    # conv1.weight
+        , %para3 : Ref[Tensor(F32)][64]    # bn1.gamma
+        , %para4 : Ref[Tensor(F32)][64]    # bn1.beta
+        , %para5 : Ref[Tensor(F32)][64]    # bn1.moving_mean
+        , %para6 : Ref[Tensor(F32)][64]    # bn1.moving_variance
+        , %para7 : Ref[Tensor(F32)][256, 64, 1, 1]    # layer1.0.conv3.weight
+        , %para8 : Ref[Tensor(F32)][256, 64, 1, 1]    # layer1.1.conv3.weight
+        , %para9 : Ref[Tensor(F32)][256, 64, 1, 1]    # layer1.2.conv3.weight
+        , %para10 : Ref[Tensor(F32)][256, 64, 1, 1]    # layer1.0.downsample.0.weight
+        , %para11 : Ref[Tensor(F32)][256]    # layer1.0.bn3.gamma
+        , %para12 : Ref[Tensor(F32)][256]    # layer1.0.bn3.beta
+        , %para13 : Ref[Tensor(F32)][256]    # layer1.0.bn3.moving_mean
+        , %para14 : Ref[Tensor(F32)][256]    # layer1.0.bn3.moving_variance
+        , %para15 : Ref[Tensor(F32)][64, 64, 3, 3]    # layer1.0.conv2.weight
+        , %para16 : Ref[Tensor(F32)][256]    # layer1.1.bn3.gamma
+        , %para17 : Ref[Tensor(F32)][256]    # layer1.1.bn3.beta
+        , %para18 : Ref[Tensor(F32)][256]    # layer1.1.bn3.moving_mean
+        , %para19 : Ref[Tensor(F32)][256]    # layer1.1.bn3.moving_variance
+        , %para20 : Ref[Tensor(F32)][64, 64, 3, 3]    # layer1.1.conv2.weight
+        , %para21 : Ref[Tensor(F32)][256]    # layer1.2.bn3.gamma
+        , %para22 : Ref[Tensor(F32)][256]    # layer1.2.bn3.beta
+        , %para23 : Ref[Tensor(F32)][256]    # layer1.2.bn3.moving_mean
+        , %para24 : Ref[Tensor(F32)][256]    # layer1.2.bn3.moving_variance
+        , %para25 : Ref[Tensor(F32)][64, 64, 3, 3]    # layer1.2.conv2.weight
+        , %para26 : Ref[Tensor(F32)][512, 128, 1, 1]    # layer2.0.conv3.weight
+        , %para27 : Ref[Tensor(F32)][512, 128, 1, 1]    # layer2.1.conv3.weight
+        , %para28 : Ref[Tensor(F32)][512, 128, 1, 1]    # layer2.2.conv3.weight
+        , %para29 : Ref[Tensor(F32)][512, 128, 1, 1]    # layer2.3.conv3.weight
+        , %para30 : Ref[Tensor(F32)][256]    # layer1.0.downsample.1.gamma
+        , %para31 : Ref[Tensor(F32)][256]    # layer1.0.downsample.1.beta
+        , %para32 : Ref[Tensor(F32)][256]    # layer1.0.downsample.1.moving_mean
+        , %para33 : Ref[Tensor(F32)][256]    # layer1.0.downsample.1.moving_variance
+        , %para34 : Ref[Tensor(F32)][512, 256, 1, 1]    # layer2.0.downsample.0.weight
+        , %para35 : Ref[Tensor(F32)][64]    # layer1.0.bn2.gamma
+        , %para36 : Ref[Tensor(F32)][64]    # layer1.0.bn2.beta
+        , %para37 : Ref[Tensor(F32)][64]    # layer1.0.bn2.moving_mean
+        , %para38 : Ref[Tensor(F32)][64]    # layer1.0.bn2.moving_variance
+        , %para39 : Ref[Tensor(F32)][64, 64, 1, 1]    # layer1.0.conv1.weight
+        , %para40 : Ref[Tensor(F32)][64]    # layer1.1.bn2.gamma
+        , %para41 : Ref[Tensor(F32)][64]    # layer1.1.bn2.beta
+        , %para42 : Ref[Tensor(F32)][64]    # layer1.1.bn2.moving_mean
+        , %para43 : Ref[Tensor(F32)][64]    # layer1.1.bn2.moving_variance
+        , %para44 : Ref[Tensor(F32)][64, 256, 1, 1]    # layer1.1.conv1.weight
+        , %para45 : Ref[Tensor(F32)][64]    # layer1.2.bn2.gamma
+        , %para46 : Ref[Tensor(F32)][64]    # layer1.2.bn2.beta
+        , %para47 : Ref[Tensor(F32)][64]    # layer1.2.bn2.moving_mean
+        , %para48 : Ref[Tensor(F32)][64]    # layer1.2.bn2.moving_variance
+        , %para49 : Ref[Tensor(F32)][64, 256, 1, 1]    # layer1.2.conv1.weight
+        , %para50 : Ref[Tensor(F32)][512]    # layer2.0.bn3.gamma
+        , %para51 : Ref[Tensor(F32)][512]    # layer2.0.bn3.beta
+        , %para52 : Ref[Tensor(F32)][512]    # layer2.0.bn3.moving_mean
+        , %para53 : Ref[Tensor(F32)][512]    # layer2.0.bn3.moving_variance
+        , %para54 : Ref[Tensor(F32)][128, 128, 3, 3]    # layer2.0.conv2.weight
+        , %para55 : Ref[Tensor(F32)][512]    # layer2.1.bn3.gamma
+        , %para56 : Ref[Tensor(F32)][512]    # layer2.1.bn3.beta
+        , %para57 : Ref[Tensor(F32)][512]    # layer2.1.bn3.moving_mean
+        , %para58 : Ref[Tensor(F32)][512]    # layer2.1.bn3.moving_variance
+        , %para59 : Ref[Tensor(F32)][128, 128, 3, 3]    # layer2.1.conv2.weight
+        , %para60 : Ref[Tensor(F32)][512]    # layer2.2.bn3.gamma
+        , %para61 : Ref[Tensor(F32)][512]    # layer2.2.bn3.beta
+        , %para62 : Ref[Tensor(F32)][512]    # layer2.2.bn3.moving_mean
+        , %para63 : Ref[Tensor(F32)][512]    # layer2.2.bn3.moving_variance
+        , %para64 : Ref[Tensor(F32)][128, 128, 3, 3]    # layer2.2.conv2.weight
+        , %para65 : Ref[Tensor(F32)][512]    # layer2.3.bn3.gamma
+        , %para66 : Ref[Tensor(F32)][512]    # layer2.3.bn3.beta
+        , %para67 : Ref[Tensor(F32)][512]    # layer2.3.bn3.moving_mean
+        , %para68 : Ref[Tensor(F32)][512]    # layer2.3.bn3.moving_variance
+        , %para69 : Ref[Tensor(F32)][128, 128, 3, 3]    # layer2.3.conv2.weight
+        , %para70 : Ref[Tensor(F32)][64]    # layer1.0.bn1.gamma
+        , %para71 : Ref[Tensor(F32)][64]    # layer1.0.bn1.beta
+        , %para72 : Ref[Tensor(F32)][64]    # layer1.0.bn1.moving_mean
+        , %para73 : Ref[Tensor(F32)][64]    # layer1.0.bn1.moving_variance
+        , %para74 : Ref[Tensor(F32)][64]    # layer1.1.bn1.gamma
+        , %para75 : Ref[Tensor(F32)][64]    # layer1.1.bn1.beta
+        , %para76 : Ref[Tensor(F32)][64]    # layer1.1.bn1.moving_mean
+        , %para77 : Ref[Tensor(F32)][64]    # layer1.1.bn1.moving_variance
+        , %para78 : Ref[Tensor(F32)][64]    # layer1.2.bn1.gamma
+        , %para79 : Ref[Tensor(F32)][64]    # layer1.2.bn1.beta
+        , %para80 : Ref[Tensor(F32)][64]    # layer1.2.bn1.moving_mean
+        , %para81 : Ref[Tensor(F32)][64]    # layer1.2.bn1.moving_variance
+        , %para82 : Ref[Tensor(F32)][1024, 256, 1, 1]    # layer3.0.conv3.weight
+        , %para83 : Ref[Tensor(F32)][1024, 256, 1, 1]    # layer3.1.conv3.weight
+        , %para84 : Ref[Tensor(F32)][1024, 256, 1, 1]    # layer3.2.conv3.weight
+        , %para85 : Ref[Tensor(F32)][1024, 256, 1, 1]    # layer3.3.conv3.weight
+        , %para86 : Ref[Tensor(F32)][1024, 256, 1, 1]    # layer3.4.conv3.weight
+        , %para87 : Ref[Tensor(F32)][1024, 256, 1, 1]    # layer3.5.conv3.weight
+        , %para88 : Ref[Tensor(F32)][512]    # layer2.0.downsample.1.gamma
+        , %para89 : Ref[Tensor(F32)][512]    # layer2.0.downsample.1.beta
+        , %para90 : Ref[Tensor(F32)][512]    # layer2.0.downsample.1.moving_mean
+        , %para91 : Ref[Tensor(F32)][512]    # layer2.0.downsample.1.moving_variance
+        , %para92 : Ref[Tensor(F32)][1024, 512, 1, 1]    # layer3.0.downsample.0.weight
+        , %para93 : Ref[Tensor(F32)][128]    # layer2.0.bn2.gamma
+        , %para94 : Ref[Tensor(F32)][128]    # layer2.0.bn2.beta
+        , %para95 : Ref[Tensor(F32)][128]    # layer2.0.bn2.moving_mean
+        , %para96 : Ref[Tensor(F32)][128]    # layer2.0.bn2.moving_variance
+        , %para97 : Ref[Tensor(F32)][128, 256, 1, 1]    # layer2.0.conv1.weight
+        , %para98 : Ref[Tensor(F32)][128]    # layer2.1.bn2.gamma
+        , %para99 : Ref[Tensor(F32)][128]    # layer2.1.bn2.beta
+        , %para100 : Ref[Tensor(F32)][128]    # layer2.1.bn2.moving_mean
+        , %para101 : Ref[Tensor(F32)][128]    # layer2.1.bn2.moving_variance
+        , %para102 : Ref[Tensor(F32)][128, 512, 1, 1]    # layer2.1.conv1.weight
+        , %para103 : Ref[Tensor(F32)][128]    # layer2.2.bn2.gamma
+        , %para104 : Ref[Tensor(F32)][128]    # layer2.2.bn2.beta
+        , %para105 : Ref[Tensor(F32)][128]    # layer2.2.bn2.moving_mean
+        , %para106 : Ref[Tensor(F32)][128]    # layer2.2.bn2.moving_variance
+        , %para107 : Ref[Tensor(F32)][128, 512, 1, 1]    # layer2.2.conv1.weight
+        , %para108 : Ref[Tensor(F32)][128]    # layer2.3.bn2.gamma
+        , %para109 : Ref[Tensor(F32)][128]    # layer2.3.bn2.beta
+        , %para110 : Ref[Tensor(F32)][128]    # layer2.3.bn2.moving_mean
+        , %para111 : Ref[Tensor(F32)][128]    # layer2.3.bn2.moving_variance
+        , %para112 : Ref[Tensor(F32)][128, 512, 1, 1]    # layer2.3.conv1.weight
+        , %para113 : Ref[Tensor(F32)][1024]    # layer3.0.bn3.gamma
+        , %para114 : Ref[Tensor(F32)][1024]    # layer3.0.bn3.beta
+        , %para115 : Ref[Tensor(F32)][1024]    # layer3.0.bn3.moving_mean
+        , %para116 : Ref[Tensor(F32)][1024]    # layer3.0.bn3.moving_variance
+        , %para117 : Ref[Tensor(F32)][256, 256, 3, 3]    # layer3.0.conv2.weight
+        , %para118 : Ref[Tensor(F32)][1024]    # layer3.1.bn3.gamma
+        , %para119 : Ref[Tensor(F32)][1024]    # layer3.1.bn3.beta
+        , %para120 : Ref[Tensor(F32)][1024]    # layer3.1.bn3.moving_mean
+        , %para121 : Ref[Tensor(F32)][1024]    # layer3.1.bn3.moving_variance
+        , %para122 : Ref[Tensor(F32)][256, 256, 3, 3]    # layer3.1.conv2.weight
+        , %para123 : Ref[Tensor(F32)][1024]    # layer3.2.bn3.gamma
+        , %para124 : Ref[Tensor(F32)][1024]    # layer3.2.bn3.beta
+        , %para125 : Ref[Tensor(F32)][1024]    # layer3.2.bn3.moving_mean
+        , %para126 : Ref[Tensor(F32)][1024]    # layer3.2.bn3.moving_variance
+        , %para127 : Ref[Tensor(F32)][256, 256, 3, 3]    # layer3.2.conv2.weight
+        , %para128 : Ref[Tensor(F32)][1024]    # layer3.3.bn3.gamma
+        , %para129 : Ref[Tensor(F32)][1024]    # layer3.3.bn3.beta
+        , %para130 : Ref[Tensor(F32)][1024]    # layer3.3.bn3.moving_mean
+        , %para131 : Ref[Tensor(F32)][1024]    # layer3.3.bn3.moving_variance
+        , %para132 : Ref[Tensor(F32)][256, 256, 3, 3]    # layer3.3.conv2.weight
+        , %para133 : Ref[Tensor(F32)][1024]    # layer3.4.bn3.gamma
+        , %para134 : Ref[Tensor(F32)][1024]    # layer3.4.bn3.beta
+        , %para135 : Ref[Tensor(F32)][1024]    # layer3.4.bn3.moving_mean
+        , %para136 : Ref[Tensor(F32)][1024]    # layer3.4.bn3.moving_variance
+        , %para137 : Ref[Tensor(F32)][256, 256, 3, 3]    # layer3.4.conv2.weight
+        , %para138 : Ref[Tensor(F32)][1024]    # layer3.5.bn3.gamma
+        , %para139 : Ref[Tensor(F32)][1024]    # layer3.5.bn3.beta
+        , %para140 : Ref[Tensor(F32)][1024]    # layer3.5.bn3.moving_mean
+        , %para141 : Ref[Tensor(F32)][1024]    # layer3.5.bn3.moving_variance
+        , %para142 : Ref[Tensor(F32)][256, 256, 3, 3]    # layer3.5.conv2.weight
+        , %para143 : Ref[Tensor(F32)][128]    # layer2.0.bn1.gamma
+        , %para144 : Ref[Tensor(F32)][128]    # layer2.0.bn1.beta
+        , %para145 : Ref[Tensor(F32)][128]    # layer2.0.bn1.moving_mean
+        , %para146 : Ref[Tensor(F32)][128]    # layer2.0.bn1.moving_variance
+        , %para147 : Ref[Tensor(F32)][128]    # layer2.1.bn1.gamma
+        , %para148 : Ref[Tensor(F32)][128]    # layer2.1.bn1.beta
+        , %para149 : Ref[Tensor(F32)][128]    # layer2.1.bn1.moving_mean
+        , %para150 : Ref[Tensor(F32)][128]    # layer2.1.bn1.moving_variance
+        , %para151 : Ref[Tensor(F32)][128]    # layer2.2.bn1.gamma
+        , %para152 : Ref[Tensor(F32)][128]    # layer2.2.bn1.beta
+        , %para153 : Ref[Tensor(F32)][128]    # layer2.2.bn1.moving_mean
+        , %para154 : Ref[Tensor(F32)][128]    # layer2.2.bn1.moving_variance
+        , %para155 : Ref[Tensor(F32)][128]    # layer2.3.bn1.gamma
+        , %para156 : Ref[Tensor(F32)][128]    # layer2.3.bn1.beta
+        , %para157 : Ref[Tensor(F32)][128]    # layer2.3.bn1.moving_mean
+        , %para158 : Ref[Tensor(F32)][128]    # layer2.3.bn1.moving_variance
+        , %para159 : Ref[Tensor(F32)][2048, 512, 1, 1]    # layer4.0.conv3.weight
+        , %para160 : Ref[Tensor(F32)][2048, 512, 1, 1]    # layer4.1.conv3.weight
+        , %para161 : Ref[Tensor(F32)][2048, 512, 1, 1]    # layer4.2.conv3.weight
+        , %para162 : Ref[Tensor(F32)][1024]    # layer3.0.downsample.1.gamma
+        , %para163 : Ref[Tensor(F32)][1024]    # layer3.0.downsample.1.beta
+        , %para164 : Ref[Tensor(F32)][1024]    # layer3.0.downsample.1.moving_mean
+        , %para165 : Ref[Tensor(F32)][1024]    # layer3.0.downsample.1.moving_variance
+        , %para166 : Ref[Tensor(F32)][2048, 1024, 1, 1]    # layer4.0.downsample.0.weight
+        , %para167 : Ref[Tensor(F32)][256]    # layer3.0.bn2.gamma
+        , %para168 : Ref[Tensor(F32)][256]    # layer3.0.bn2.beta
+        , %para169 : Ref[Tensor(F32)][256]    # layer3.0.bn2.moving_mean
+        , %para170 : Ref[Tensor(F32)][256]    # layer3.0.bn2.moving_variance
+        , %para171 : Ref[Tensor(F32)][256, 512, 1, 1]    # layer3.0.conv1.weight
+        , %para172 : Ref[Tensor(F32)][256]    # layer3.1.bn2.gamma
+        , %para173 : Ref[Tensor(F32)][256]    # layer3.1.bn2.beta
+        , %para174 : Ref[Tensor(F32)][256]    # layer3.1.bn2.moving_mean
+        , %para175 : Ref[Tensor(F32)][256]    # layer3.1.bn2.moving_variance
+        , %para176 : Ref[Tensor(F32)][256, 1024, 1, 1]    # layer3.1.conv1.weight
+        , %para177 : Ref[Tensor(F32)][256]    # layer3.2.bn2.gamma
+        , %para178 : Ref[Tensor(F32)][256]    # layer3.2.bn2.beta
+        , %para179 : Ref[Tensor(F32)][256]    # layer3.2.bn2.moving_mean
+        , %para180 : Ref[Tensor(F32)][256]    # layer3.2.bn2.moving_variance
+        , %para181 : Ref[Tensor(F32)][256, 1024, 1, 1]    # layer3.2.conv1.weight
+        , %para182 : Ref[Tensor(F32)][256]    # layer3.3.bn2.gamma
+        , %para183 : Ref[Tensor(F32)][256]    # layer3.3.bn2.beta
+        , %para184 : Ref[Tensor(F32)][256]    # layer3.3.bn2.moving_mean
+        , %para185 : Ref[Tensor(F32)][256]    # layer3.3.bn2.moving_variance
+        , %para186 : Ref[Tensor(F32)][256, 1024, 1, 1]    # layer3.3.conv1.weight
+        , %para187 : Ref[Tensor(F32)][256]    # layer3.4.bn2.gamma
+        , %para188 : Ref[Tensor(F32)][256]    # layer3.4.bn2.beta
+        , %para189 : Ref[Tensor(F32)][256]    # layer3.4.bn2.moving_mean
+        , %para190 : Ref[Tensor(F32)][256]    # layer3.4.bn2.moving_variance
+        , %para191 : Ref[Tensor(F32)][256, 1024, 1, 1]    # layer3.4.conv1.weight
+        , %para192 : Ref[Tensor(F32)][256]    # layer3.5.bn2.gamma
+        , %para193 : Ref[Tensor(F32)][256]    # layer3.5.bn2.beta
+        , %para194 : Ref[Tensor(F32)][256]    # layer3.5.bn2.moving_mean
+        , %para195 : Ref[Tensor(F32)][256]    # layer3.5.bn2.moving_variance
+        , %para196 : Ref[Tensor(F32)][256, 1024, 1, 1]    # layer3.5.conv1.weight
+        , %para197 : Ref[Tensor(F32)][2048]    # layer4.0.bn3.gamma
+        , %para198 : Ref[Tensor(F32)][2048]    # layer4.0.bn3.beta
+        , %para199 : Ref[Tensor(F32)][2048]    # layer4.0.bn3.moving_mean
+        , %para200 : Ref[Tensor(F32)][2048]    # layer4.0.bn3.moving_variance
+        , %para201 : Ref[Tensor(F32)][512, 512, 3, 3]    # layer4.0.conv2.weight
+        , %para202 : Ref[Tensor(F32)][2048]    # layer4.1.bn3.gamma
+        , %para203 : Ref[Tensor(F32)][2048]    # layer4.1.bn3.beta
+        , %para204 : Ref[Tensor(F32)][2048]    # layer4.1.bn3.moving_mean
+        , %para205 : Ref[Tensor(F32)][2048]    # layer4.1.bn3.moving_variance
+        , %para206 : Ref[Tensor(F32)][512, 512, 3, 3]    # layer4.1.conv2.weight
+        , %para207 : Ref[Tensor(F32)][2048]    # layer4.2.bn3.gamma
+        , %para208 : Ref[Tensor(F32)][2048]    # layer4.2.bn3.beta
+        , %para209 : Ref[Tensor(F32)][2048]    # layer4.2.bn3.moving_mean
+        , %para210 : Ref[Tensor(F32)][2048]    # layer4.2.bn3.moving_variance
+        , %para211 : Ref[Tensor(F32)][512, 512, 3, 3]    # layer4.2.conv2.weight
+        , %para212 : Ref[Tensor(F32)][256]    # layer3.0.bn1.gamma
+        , %para213 : Ref[Tensor(F32)][256]    # layer3.0.bn1.beta
+        , %para214 : Ref[Tensor(F32)][256]    # layer3.0.bn1.moving_mean
+        , %para215 : Ref[Tensor(F32)][256]    # layer3.0.bn1.moving_variance
+        , %para216 : Ref[Tensor(F32)][256]    # layer3.1.bn1.gamma
+        , %para217 : Ref[Tensor(F32)][256]    # layer3.1.bn1.beta
+        , %para218 : Ref[Tensor(F32)][256]    # layer3.1.bn1.moving_mean
+        , %para219 : Ref[Tensor(F32)][256]    # layer3.1.bn1.moving_variance
+        , %para220 : Ref[Tensor(F32)][256]    # layer3.2.bn1.gamma
+        , %para221 : Ref[Tensor(F32)][256]    # layer3.2.bn1.beta
+        , %para222 : Ref[Tensor(F32)][256]    # layer3.2.bn1.moving_mean
+        , %para223 : Ref[Tensor(F32)][256]    # layer3.2.bn1.moving_variance
+        , %para224 : Ref[Tensor(F32)][256]    # layer3.3.bn1.gamma
+        , %para225 : Ref[Tensor(F32)][256]    # layer3.3.bn1.beta
+        , %para226 : Ref[Tensor(F32)][256]    # layer3.3.bn1.moving_mean
+        , %para227 : Ref[Tensor(F32)][256]    # layer3.3.bn1.moving_variance
+        , %para228 : Ref[Tensor(F32)][256]    # layer3.4.bn1.gamma
+        , %para229 : Ref[Tensor(F32)][256]    # layer3.4.bn1.beta
+        , %para230 : Ref[Tensor(F32)][256]    # layer3.4.bn1.moving_mean
+        , %para231 : Ref[Tensor(F32)][256]    # layer3.4.bn1.moving_variance
+        , %para232 : Ref[Tensor(F32)][256]    # layer3.5.bn1.gamma
+        , %para233 : Ref[Tensor(F32)][256]    # layer3.5.bn1.beta
+        , %para234 : Ref[Tensor(F32)][256]    # layer3.5.bn1.moving_mean
+        , %para235 : Ref[Tensor(F32)][256]    # layer3.5.bn1.moving_variance
+        , %para236 : Ref[Tensor(F32)][2048]    # layer4.0.downsample.1.gamma
+        , %para237 : Ref[Tensor(F32)][2048]    # layer4.0.downsample.1.beta
+        , %para238 : Ref[Tensor(F32)][2048]    # layer4.0.downsample.1.moving_mean
+        , %para239 : Ref[Tensor(F32)][2048]    # layer4.0.downsample.1.moving_variance
+        , %para240 : Ref[Tensor(F32)][512]    # layer4.0.bn2.gamma
+        , %para241 : Ref[Tensor(F32)][512]    # layer4.0.bn2.beta
+        , %para242 : Ref[Tensor(F32)][512]    # layer4.0.bn2.moving_mean
+        , %para243 : Ref[Tensor(F32)][512]    # layer4.0.bn2.moving_variance
+        , %para244 : Ref[Tensor(F32)][512, 1024, 1, 1]    # layer4.0.conv1.weight
+        , %para245 : Ref[Tensor(F32)][512]    # layer4.1.bn2.gamma
+        , %para246 : Ref[Tensor(F32)][512]    # layer4.1.bn2.beta
+        , %para247 : Ref[Tensor(F32)][512]    # layer4.1.bn2.moving_mean
+        , %para248 : Ref[Tensor(F32)][512]    # layer4.1.bn2.moving_variance
+        , %para249 : Ref[Tensor(F32)][512, 2048, 1, 1]    # layer4.1.conv1.weight
+        , %para250 : Ref[Tensor(F32)][512]    # layer4.2.bn2.gamma
+        , %para251 : Ref[Tensor(F32)][512]    # layer4.2.bn2.beta
+        , %para252 : Ref[Tensor(F32)][512]    # layer4.2.bn2.moving_mean
+        , %para253 : Ref[Tensor(F32)][512]    # layer4.2.bn2.moving_variance
+        , %para254 : Ref[Tensor(F32)][512, 2048, 1, 1]    # layer4.2.conv1.weight
+        , %para255 : Ref[Tensor(F32)][512]    # layer4.0.bn1.gamma
+        , %para256 : Ref[Tensor(F32)][512]    # layer4.0.bn1.beta
+        , %para257 : Ref[Tensor(F32)][512]    # layer4.0.bn1.moving_mean
+        , %para258 : Ref[Tensor(F32)][512]    # layer4.0.bn1.moving_variance
+        , %para259 : Ref[Tensor(F32)][512]    # layer4.1.bn1.gamma
+        , %para260 : Ref[Tensor(F32)][512]    # layer4.1.bn1.beta
+        , %para261 : Ref[Tensor(F32)][512]    # layer4.1.bn1.moving_mean
+        , %para262 : Ref[Tensor(F32)][512]    # layer4.1.bn1.moving_variance
+        , %para263 : Ref[Tensor(F32)][512]    # layer4.2.bn1.gamma
+        , %para264 : Ref[Tensor(F32)][512]    # layer4.2.bn1.beta
+        , %para265 : Ref[Tensor(F32)][512]    # layer4.2.bn1.moving_mean
+        , %para266 : Ref[Tensor(F32)][512]    # layer4.2.bn1.moving_variance
+    ) {
+    %1 : Tuple[] = Primitive::MakeTuple{prim_type=1}() #scope: Default
+      # #[CNode]2
+    %2 : Tuple[] = Primitive::MakeTuple{prim_type=1}() #scope: Default
+      # #[CNode]3
+    %3 : Dictionary[[],[]] = Primitive::make_dict{prim_type=1}(%1, %2)    #(Tuple[], Tuple[]) #scope: Default
+      # #[CNode]4
+
+#------------------------> 0
+    %4 = UnpackCall::unpack_call(FuncGraph::fg_5, %para1, %3)    #(Func, Tensor(F32)[2, 3, 224, 224], Dictionary[[],[]])    # fg_5=construct.5 #scope: Default
+      # In file C:/ProgramData/_Projects/PyProjects/MS1/bagoftricks-lt/lib/backbone/resnet.py(170)/        if 'layer' in kwargs and kwargs['layer'] == 'layer1':/#[CNode]6
+    Primitive::Return{prim_type=1}(%4)    #(Undefined) #scope: Default
+      # In file C:/ProgramData/_Projects/PyProjects/MS1/bagoftricks-lt/lib/backbone/resnet.py(170)/        if 'layer' in kwargs and kwargs['layer'] == 'layer1':/#[CNode]7
+}
+# order:
+#   1: construct_wrapper.1:[CNode]6{[0]: ValueNode<UnpackCall> unpack_call, [1]: ValueNode<FuncGraph> construct.5, [2]: x, [3]: [CNode]4}
+#   2: construct_wrapper.1:[CNode]7{[0]: ValueNode<Primitive> Return, [1]: [CNode]6}
+
+
+#===============================================================================
+# num of function graphs in stack: 1
